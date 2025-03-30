@@ -1,17 +1,15 @@
+# extouchtriangle/tex-fmt
+
+Additions:
+
+- `\ii` command support for latex item
+
 # tex-fmt <img src="https://github.com/WGUNDERWOOD/tex-fmt/raw/main/extra/logo.svg" alt="tex-fmt" align="right" width=160 />
 
-[![CI](
-https://github.com/wgunderwood/tex-fmt/actions/workflows/ci.yml/badge.svg)](
-https://github.com/wgunderwood/tex-fmt/actions/workflows/ci.yml)
-[![crates.io](
-https://img.shields.io/crates/v/tex-fmt?logo=rust)](
-https://crates.io/crates/tex-fmt)
-[![Packaging status](
-https://repology.org/badge/tiny-repos/tex-fmt.svg)](
-https://repology.org/project/tex-fmt/versions)
-[![license: MIT](
-https://shields.io/badge/license-MIT-blue.svg)](
-https://mit-license.org/)
+[![CI](https://github.com/wgunderwood/tex-fmt/actions/workflows/ci.yml/badge.svg)](https://github.com/wgunderwood/tex-fmt/actions/workflows/ci.yml)
+[![crates.io](https://img.shields.io/crates/v/tex-fmt?logo=rust)](https://crates.io/crates/tex-fmt)
+[![Packaging status](https://repology.org/badge/tiny-repos/tex-fmt.svg)](https://repology.org/project/tex-fmt/versions)
+[![license: MIT](https://shields.io/badge/license-MIT-blue.svg)](https://mit-license.org/)
 
 An extremely fast LaTeX formatter written in Rust.
 Try it out now in your
@@ -29,7 +27,7 @@ Try it out now in your
 <tr>
 <td>
 
-``` tex
+```tex
 \documentclass{article}
 
 \begin{document}
@@ -45,10 +43,11 @@ E = m c^2
 
 \end{document}
 ```
+
 </td>
 <td>
 
-``` tex
+```tex
 \documentclass{article}
 
 \begin{document}
@@ -64,6 +63,7 @@ E = m c^2
 
 \end{document}
 ```
+
 </td>
 </tr>
 </table>
@@ -80,7 +80,7 @@ E = m c^2
 
 Install the [stable release](https://crates.io/crates/tex-fmt) with
 
-``` shell
+```shell
 cargo install tex-fmt
 ```
 
@@ -93,17 +93,16 @@ cargo install --git "https://github.com/wgunderwood/tex-fmt"
 ### Nix
 
 Install from
-[nixpkgs](
-https://search.nixos.org/packages?channel=unstable&query=tex-fmt)
+[nixpkgs](https://search.nixos.org/packages?channel=unstable&query=tex-fmt)
 into a temporary shell with
 
-``` shell
+```shell
 nix-shell -p tex-fmt
 ```
 
 Build from source using flakes with
 
-``` shell
+```shell
 nix build "github:wgunderwood/tex-fmt"
 ```
 
@@ -124,7 +123,7 @@ Install from the
 [Arch User Repository](https://aur.archlinux.org/packages/tex-fmt).
 For example, using the [yay](https://github.com/Jguer/yay) AUR helper:
 
-``` shell
+```shell
 yay -S tex-fmt
 ```
 
@@ -133,7 +132,7 @@ yay -S tex-fmt
 Install from the [Debian archive](https://www.debian.org/distrib/packages)
 (trixie and later):
 
-``` shell
+```shell
 apt install tex-fmt
 ```
 
@@ -171,11 +170,10 @@ The [tex-fmt-action](https://github.com/grayespinoza/tex-fmt-action) can install
 
 The most commonly used options are given below.
 For a full list, see the
-[options](
-https://github.com/WGUNDERWOOD/tex-fmt?tab=readme-ov-file#options)
+[options](https://github.com/WGUNDERWOOD/tex-fmt?tab=readme-ov-file#options)
 section below.
 
-``` shell
+```shell
 tex-fmt file.tex                  # format file.tex and overwrite
 tex-fmt --check file.tex          # check if file.tex is correctly formatted
 tex-fmt --print file.tex          # format file.tex and print to stdout
@@ -195,9 +193,9 @@ will be read from the following locations, in order of decreasing priority.
 - A file named `tex-fmt.toml` in the root directory of the current git repository
 - A file named `tex-fmt.toml` in a subdirectory titled `tex-fmt/`
   in the user's configuration directory
-    - Linux: `~/.config/tex-fmt/tex-fmt.toml`
-    - macOS: `/Users/<user>/Library/Application Support/tex-fmt/tex-fmt.toml`
-    - Windows: `C:\Users\<user>\AppData\Roaming\tex-fmt\tex-fmt.toml`
+  - Linux: `~/.config/tex-fmt/tex-fmt.toml`
+  - macOS: `/Users/<user>/Library/Application Support/tex-fmt/tex-fmt.toml`
+  - Windows: `C:\Users\<user>\AppData\Roaming\tex-fmt\tex-fmt.toml`
 
 Arguments passed on the command line will always override those
 specified in configuration files. An example configuration file
@@ -214,7 +212,7 @@ Use `--noconfig` or `--config <config>` to avoid this.
 Ending a source line with `% tex-fmt: skip` disables formatting for that line.
 To disable the formatter for a block, use `% tex-fmt: off` and `% tex-fmt: on`.
 
-``` tex
+```tex
 \documentclass{article}
 
 \begin{document}
@@ -236,8 +234,7 @@ and `minted` are automatically skipped.
 
 Shell completion scripts can be generated at run-time using the
 `--completion <shell>` flag. See the
-[completion](
-https://github.com/WGUNDERWOOD/tex-fmt/tree/main/completion)
+[completion](https://github.com/WGUNDERWOOD/tex-fmt/tree/main/completion)
 directory for more details.
 
 ### Man page
@@ -264,8 +261,8 @@ repos:
 To prevent the pre-commit hook from modifying your files, add:
 
 ```yaml
-      - id: tex-fmt
-        args: [--check]
+- id: tex-fmt
+  args: [--check]
 ```
 
 ## Performance
@@ -274,8 +271,8 @@ When formatting all of the test cases,
 tex-fmt is over a thousand times faster than latexindent.
 
 | **Files** | **Lines** | **Size** | **tex-fmt** | **latexindent** | **latexindent -m** |
-| --- | --- | --- | --- | --- | --- |
-| 51 | 94k | 3.5M | **0.055s** | 106s [x1927] | 127s [x2309] |
+| --------- | --------- | -------- | ----------- | --------------- | ------------------ |
+| 51        | 94k       | 3.5M     | **0.055s**  | 106s [x1927]    | 127s [x2309]       |
 
 ## Contribution
 
@@ -296,57 +293,57 @@ Alternatively, you can
 ## Existing tools
 
 - [latexindent](https://github.com/cmhughes/latexindent.pl).
-Perl script, many configuration options, slow on large files
+  Perl script, many configuration options, slow on large files
 
 - [bibtex-tidy](https://github.com/FlamingTempura/bibtex-tidy).
-JavaScript program, specifically for BibTeX files
+  JavaScript program, specifically for BibTeX files
 
 - [LaTeXTidy](http://bfc.sfsu.edu/cgi-bin/hsu.pl?LaTeX_Tidy).
-Perl script, download links seem to be broken
+  Perl script, download links seem to be broken
 
 - [latex-pretty](https://c.albert-thompson.com/latex-pretty/).
-Browser-based, uses latexindent as the backend
+  Browser-based, uses latexindent as the backend
 
 - [latexformat.com](https://latexformat.com/).
-Browser-based
+  Browser-based
 
 - [texpretty](http://ftp.math.utah.edu/pub/texpretty/).
-C program which works sometimes and appears to be fast
+  C program which works sometimes and appears to be fast
 
 - [latex-editor](https://latex-editor.pages.dev/formatter/).
-Browser-based
+  Browser-based
 
 - [LaTeXFmt](https://github.com/engeljh/vim-latexfmt).
-Vim plugin, does not apply indentation
+  Vim plugin, does not apply indentation
 
 - [latex-formatter](https://github.com/nfode/latex-formatter).
-Visual Studio plugin, uses latexindent as the backend
+  Visual Studio plugin, uses latexindent as the backend
 
 - [LLF](https://repo.or.cz/llf.git).
-Lua script, many configuration options
+  Lua script, many configuration options
 
 ## Options
 
 The following command-line options are offered by tex-fmt.
 
-| Option             | Alias | Default | Description |
-| ------------------ | ----- | ------- | --- |
-| `--check`          | `-c`  |         | Check formatting, do not modify files |
-| `--print`          | `-p`  |         | Print to stdout, do not modify files |
-| `--fail-on-change` | `-f`  |         | Fail if files are modified |
-| `--nowrap`         | `-n`  |         | Do not wrap long lines |
-| `--wraplen`        | `-l`  | `80`    | Line length for wrapping |
-| `--tabsize`        | `-t`  | `2`     | Number of characters to use as tab size |
-| `--usetabs`        |       |         | Use tabs instead of spaces for indentation |
-| `--stdin`          | `-s`  |         | Process stdin as a single file, output to stdout |
-| `--config`         |       |         | Path to config file |
-| `--noconfig`       |       |         | Do not read any config file |
+| Option             | Alias | Default | Description                                          |
+| ------------------ | ----- | ------- | ---------------------------------------------------- |
+| `--check`          | `-c`  |         | Check formatting, do not modify files                |
+| `--print`          | `-p`  |         | Print to stdout, do not modify files                 |
+| `--fail-on-change` | `-f`  |         | Fail if files are modified                           |
+| `--nowrap`         | `-n`  |         | Do not wrap long lines                               |
+| `--wraplen`        | `-l`  | `80`    | Line length for wrapping                             |
+| `--tabsize`        | `-t`  | `2`     | Number of characters to use as tab size              |
+| `--usetabs`        |       |         | Use tabs instead of spaces for indentation           |
+| `--stdin`          | `-s`  |         | Process stdin as a single file, output to stdout     |
+| `--config`         |       |         | Path to config file                                  |
+| `--noconfig`       |       |         | Do not read any config file                          |
 | `--lists`          |       |         | Extra list environments to be formatted as `itemize` |
-| `--verbose`        | `-v`  |         | Show info messages |
-| `--quiet`          | `-q`  |         | Hide warning messages |
-| `--trace`          |       |         | Show trace messages |
-| `--completion`     |       |         | Generate a shell completion script |
-| `--man`            |       |         | Generate a man page |
-| `--args`           |       |         | View arguments passed to tex-fmt |
-| `--help`           | `-h`  |         | Print help |
-| `--version`        | `-V`  |         | Print version |
+| `--verbose`        | `-v`  |         | Show info messages                                   |
+| `--quiet`          | `-q`  |         | Hide warning messages                                |
+| `--trace`          |       |         | Show trace messages                                  |
+| `--completion`     |       |         | Generate a shell completion script                   |
+| `--man`            |       |         | Generate a man page                                  |
+| `--args`           |       |         | View arguments passed to tex-fmt                     |
+| `--help`           | `-h`  |         | Print help                                           |
+| `--version`        | `-V`  |         | Print version                                        |
