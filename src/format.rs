@@ -5,7 +5,7 @@ use crate::ignore::*;
 use crate::indent::*;
 use crate::logging::*;
 use crate::read::*;
-use crate::regexes::{ENV_BEGIN, ENV_END, ITEM, RE_SPLITTING};
+use crate::regexes::{ENV_BEGIN, ENV_END, ITEM, II, RE_SPLITTING};
 use crate::subs::*;
 use crate::verbatim::*;
 use crate::wrap::*;
