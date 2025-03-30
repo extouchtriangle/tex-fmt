@@ -23,7 +23,7 @@ const VERBATIMS: [&str; 5] =
     ["verbatim", "Verbatim", "lstlisting", "minted", "comment"];
 
 /// Regex matches for sectioning commands
-const SPLITTING: [&str; 6] = [
+const SPLITTING: [&str; 7] = [
     r"\\begin\{",
     r"\\end\{",
     r"\\item(?:$|[^a-zA-Z])",
