@@ -6,6 +6,7 @@ use regex::Regex;
 
 /// Match a LaTeX \item
 pub const ITEM: &str = "\\item";
+pub const II: &str = "\\ii";
 /// Match a LaTeX \begin{document}
 pub const DOC_BEGIN: &str = "\\begin{document}";
 /// Match a LaTeX \end{document}

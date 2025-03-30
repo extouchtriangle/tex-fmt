@@ -104,6 +104,8 @@ fn get_back(
     } else if pattern.contains_item && line.contains(ITEM) {
         // deindent items to make the rest of item environment appear indented
         back += 1;
+    } else if pattern.contains_ii && line.contains(II){
+        back += 1;
     };
 
     // Dedent delimiters

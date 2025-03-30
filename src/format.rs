@@ -239,6 +239,7 @@ impl Pattern {
                 contains_env_begin: s.contains(ENV_BEGIN),
                 contains_env_end: s.contains(ENV_END),
                 contains_item: s.contains(ITEM),
+                contains_ii: s.contains(II),
                 contains_splitting: true,
                 contains_comment: s.contains('%'),
             }
