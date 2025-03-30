@@ -250,6 +250,7 @@ impl Pattern {
                 contains_env_begin: false,
                 contains_env_end: false,
                 contains_item: false,
+                contains_ii: false,
                 contains_splitting: false,
                 contains_comment: s.contains('%'),
             }

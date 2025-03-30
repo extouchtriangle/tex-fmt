@@ -27,6 +27,7 @@ const SPLITTING: [&str; 6] = [
     r"\\begin\{",
     r"\\end\{",
     r"\\item(?:$|[^a-zA-Z])",
+    r"\\ii(?:$|[^a-zA-Z])",
     r"\\(?:sub){0,2}section\*?\{",
     r"\\chapter\*?\{",
     r"\\part\*?\{",
