@@ -228,6 +228,8 @@ pub struct Pattern {
     pub contains_splitting: bool,
     /// Whether a comment is present
     pub contains_comment: bool,
+    /// Whether my \ii command is present
+    pub contains_ii: bool,
 }
 
 impl Pattern {
