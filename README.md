@@ -1,5 +1,4 @@
-# extouchtriangle/tex-fmt
-
+[![Dotfiles](https://extouchtriangle-readme-stats.vercel.app/api/pin/?username=extouchtriangle&repo=tex-fmt&theme=tokyonight&border_color=43c2b2&locale=en&show_owner=true)](https://github.com/extouchtriangle/tex-fmt)
 Additions:
 
 - `\ii` command support for latex item
