@@ -1,8 +1,11 @@
 [![Dotfiles](https://extouchtriangle-readme-stats.vercel.app/api/pin/?username=extouchtriangle&repo=tex-fmt&theme=tokyonight&border_color=43c2b2&locale=en&show_owner=true)](https://github.com/extouchtriangle/tex-fmt)
-Additions:
+
+Additions not in upstream:
 
 - `\ii` command support for latex item
 
+
+ORIGINAL README BELOW
 # tex-fmt <img src="https://github.com/WGUNDERWOOD/tex-fmt/raw/main/extra/logo.svg" alt="tex-fmt" align="right" width=160 />
 
 [![CI](https://github.com/wgunderwood/tex-fmt/actions/workflows/ci.yml/badge.svg)](https://github.com/wgunderwood/tex-fmt/actions/workflows/ci.yml)
